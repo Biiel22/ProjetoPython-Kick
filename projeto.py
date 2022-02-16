@@ -166,6 +166,35 @@ elif opc1 == "4":
 
     MaiorNObitosPorDia()
 
+    relatorio.output('Relatório COVID-19.pdf')
+
+    print("\n")
+    print("===============================================")
+    print("1. Link do relatório")
+    print("2. Abrir relatório")
+    print("===============================================")
+    rel_finalizado = input("Maravilha, PDF gerado. Escolha uma opção acima: ")
+    print("===============================================")
+    print("\n")
+
+    if rel_finalizado == '1':
+        print(diretorio+r'\Relatório COVID-19.pdf')
+        
+        print("\n")
+        print("===========================================")
+        print("Ótimo!")
+        print("Copie selecionando o diretório")
+        print("Em seguida clique com o Botão Direito")
+        print("Cole em seu navegador.")
+        print("===========================================")
+        print("\n")
+
+    elif rel_finalizado == '2':
+        relat = 'Relatório COVID-19.pdf'
+        subprocess.Popen([relat], shell=True)
+
+        print("Relatório aberto! Até mais :)")
+        print("\n")
 
 elif opc1 == "5":
     print("Certo. Até mais!")
@@ -174,34 +203,5 @@ else:
     print("Desculpe. Não consegui te entender. Tente novamente!")
 
 
-relatorio.output('Relatório COVID-19.pdf')
-
-print("\n")
-print("===============================================")
-print("1. Link do relatório")
-print("2. Abrir relatório")
-print("===============================================")
-rel_finalizado = input("Maravilha, PDF gerado. Escolha uma opção acima: ")
-print("===============================================")
-print("\n")
-
-if rel_finalizado == '1':
-    print(diretorio+r'\Relatório COVID-19.pdf')
-    
-    print("\n")
-    print("===========================================")
-    print("Ótimo!")
-    print("Copie selecionando o diretório")
-    print("Em seguida clique com o Botão Direito")
-    print("Cole em seu navegador.")
-    print("===========================================")
-    print("\n")
-
-elif rel_finalizado == '2':
-    relat = 'Relatório COVID-19.pdf'
-    subprocess.Popen([relat], shell=True)
-
-    print("Relatório aberto! Até mais :)")
-    print("\n")
 
 os.system("pause")
